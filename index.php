@@ -13,9 +13,9 @@ require __DIR__ . "../server/database.php"
     <title>Dischi</title>
 </head>
 <body>
-    <div class="container" style="display: flex;">
+    <div class="container" style="display: flex; flex-flow: row wrap">
         <?php foreach ($database as $album) { ?>
-            <div class="album" style="display: flex; flex-flow:column; width: calc(100%/4)">
+            <div class="album" style="display: flex; flex-flow:column; width: calc(100%/4 - 10px); padding:5px">
                 <?php
                     echo "<img src='$album[poster]' alt='Album'>";
                     echo "<h2>$album[title]</h2>";
